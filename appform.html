@@ -5,31 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    /* Universal selector */
+    * {
+      box-sizing: border-box;
+    }
+    /* Body selector */
     body {
       font-family: Arial, sans-serif;
-      background: white;
-      align-items: center;
+      background: #f6faff;
     }
-    .form-container {
-      background: white;
-    }
+    /* Element selector */
     h1 {
+      color: #007bff;
       text-align: center;
-      color: black;
     }
-    fieldset {
-      border: 2px solid #007bff;
-      margin-bottom: 16px;
-      border-radius: 6px;
-      padding-bottom: 10px;
-    }
-    legend {
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #007bff;  
-    }
-    label {
+    /* Descendant selector */
+    fieldset label {
       color: #444;
+    }
+    /* RGBA color example */
+    fieldset {
+      border: 2px solid rgba(0,123,255,0.7);
+    }
+    /* Hex color example */
+    legend {
+      color: #007bff;
+      font-weight: bold;
     }
     input[type="text"],
     input[type="email"],
@@ -39,22 +40,12 @@
       border: 1px solid #ccc;
       font-size: 15px;
       background: #f9f9f9;
-      margin-bottom: 8px;
       border-radius: 4px;
-      padding: 5px 8px;
       width: 100%;
-      box-sizing: border-box;
     }
     input[type="radio"] {
       margin-left: 10px;
       margin-right: 3px;
-    }
-    input[type="text"]:focus,
-    input[type="email"]:focus,
-    input[type="tel"]:focus,
-    input[type="date"]:focus,
-    select:focus {
-      border: 1.5px solid #007bff;
     }
     input[type="submit"] {
       background: #007bff;
@@ -62,11 +53,9 @@
       border: none;
       font-size: 16px;
       border-radius: 5px;
-      padding: 10px 0;
       width: 100%;
       font-weight: 600;
       cursor: pointer;
-      transition: background 0.2s;
     }
     input[type="submit"]:hover {
       background: #0056b3;
@@ -74,65 +63,59 @@
   </style>
 </head>
 <body>
-  <div class="form-container">
-    <h1>Application Form</h1>
-    <form action="#" method="post">
-      <fieldset>
-        <legend>Personal Information</legend>
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" required>
-        <br>
+  <h1>Application Form</h1>
+  <form action="#" method="post">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" required>
 
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" required>
-        <br>
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
 
-        <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone" required>
-      </fieldset>
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </fieldset>
 
-      <fieldset>
-        <legend>Job Details</legend>
-        <label for="position">Position Applied:</label>
-        <select id="position" name="position" required>
-          <option value="">--Select Position--</option>
-          <option value="frontend">Frontend Developer</option>
-          <option value="backend">Backend Developer</option>
-          <option value="fullstack">Full Stack Developer</option>
-          <option value="designer">UI/UX Designer</option>
-          <option value="tester">Software Tester</option>
-        </select>
-        <br>
-        <label for="experience">Year of Experience:</label>
-        <select id="experience" name="experience" required>
-          <option value="">--Select Years--</option>
-          <option value="0">0</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5+</option>
-        </select>
-      </fieldset>
+    <fieldset>
+      <legend>Job Details</legend>
+      <label for="position">Position Applied:</label>
+      <select id="position" name="position" required>
+        <option value="">--Select Position--</option>
+        <option value="frontend">Frontend Developer</option>
+        <option value="backend">Backend Developer</option>
+        <option value="fullstack">Full Stack Developer</option>
+        <option value="designer">UI/UX Designer</option>
+        <option value="tester">Software Tester</option>
+      </select>
 
-      <fieldset>
-        <legend>Availability</legend>
-        <label for="availdate">Available Date:</label>
-        <input type="date" id="availdate" name="availdate" required>
-        <br>
-        <label>Willing to Relocate:</label>
-        <input type="radio" id="relocateYes" name="relocate" value="yes" required>
-        <label for="relocateYes" style="display:inline; font-weight:400;">Yes</label>
-        <input type="radio" id="relocateNo" name="relocate" value="no">
-        <label for="relocateNo" style="display:inline; font-weight:400;">No</label>
-      </fieldset>
+      <label for="experience">Year of Experience:</label>
+      <select id="experience" name="experience" required>
+        <option value="">--Select Years--</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5+</option>
+      </select>
+    </fieldset>
 
-      <input type="submit" value="Submit">
-      <div id="form-messages"></div>
-    </form>
-  </div>
-</body>
+    <fieldset>
+      <legend>Availability</legend>
+      <label for="availdate">Available Date:</label>
+      <input type="date" id="availdate" name="availdate" required>
+
+      <label>Willing to Relocate:</label>
+      <input type="radio" id="relocateYes" name="relocate" value="yes" required>
+      <label for="relocateYes" style="display:inline; font-weight:400;">Yes</label>
+      <input type="radio" id="relocateNo" name="relocate" value="no">
+      <label for="relocateNo" style="display:inline; font-weight:400;">No</label>
+    </fieldset>
+
+    <input type="submit" value="Submit">
+    <div id="form-messages"></div>
+  </form>
