@@ -1,0 +1,41 @@
+    *{ /*universal selector*/
+      background-color: rgb(250, 193, 201);
+    }
+    p { /*element selector*/
+      font-size: 30px;
+      background-color: cadetblue;
+    }
+    p:active {
+      color: green; /* Changes color only while mouse is pressed */
+      font-weight: bold;
+    }
+    p:hover {
+      text-decoration: underline; /* Example: underline on hover */
+    }
+    #mypara{
+      font-style: italic;
+      color: darkblue;
+      background-color: lightgrey;
+    }
+    #mypara2{
+      font-style:inherit;
+      color: deepskyblue;
+      background-color: blueviolet;
+    }
+    .myclass {
+      font-weight: bold;
+      color: darkgreen;
+      background-color: limegreen;
+    }
+    h2,h3,h4,h5{
+      color: purple;
+      background-color: chocolate;
+    }
+    div p{ /*descendant selector*/
+      color: black;
+      background-color: burlywood;
+      font-size: 20px;
+    }
+    h1{
+      background-color: lightcoral;
+    }

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(120deg, #f3f4f6 60%, #e0e7ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form{
+            background-color: #fff;
+            padding: 32px 36px;
+            border-radius: 12px;
+            box-shadow: 0 6px 24px rgba(60, 72, 88, 0.13);
+            width: 350px;
+        }
+        h2{
+            text-align: center;
+            margin-bottom: 24px;
+            color: #3b3b3b;
+            letter-spacing: 1px;
+        }
+        label{
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: #444;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 16px;
+            border: 1px solid #cfd8dc;
+            border-radius: 5px;
+            font-size: 15px;
+            background: #f9fafb;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border: 1.5px solid #7c3aed;
+            outline: none;
+        }
+        .radio-group, .checkbox-group {
+            margin-bottom: 16px;
+        }
+        .radio-group label,
+        .checkbox-group label {
+            display: inline-block;
+            margin-right: 15px;
+            font-weight: 400;
+            color: #555;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background: #7c3aed;
+            color: #fff;
+            border: none;
+            padding: 10px 0;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #5b21b6;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Registration Form</h2>
+        <label for="Username">Username:</label>
+        <input type="text" name="Username" placeholder="Enter username">
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" placeholder="Enter your email">
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="Enter password">
+
+        <div class="radio-group">
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male" style="font-weight:400;">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female" style="font-weight:400;">Female</label>
+        </div>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" name="dob" id="dob">
+
+        <div class="checkbox-group">
+            <label>Skills:</label>
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label for="html" style="font-weight:400;">HTML</label>
+            <input type="checkbox" id="css" name="skills" value="CSS">
+            <label for="css" style="font-weight:400;">CSS</label>
+            <input type="checkbox" id="js" name="skills" value="JavaScript">
+            <label for="js" style="font-weight:400;">JavaScript</label>
+        </div>
+
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">UK</option>
+        </select> 
+
+    <label for="resume">Upload Resume:</label>
+    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+    <br><br>
+
+          <input type="submit" value="Submit">
+    </form>
+</body>
+</html>\
