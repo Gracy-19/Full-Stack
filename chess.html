@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .chessboard {
+      display: grid;
+      grid-template-columns: repeat(8, 50px);
+      grid-template-rows: repeat(8, 50px);
+    }
+    .chessboard div {
+      width: 50px;
+      height: 50px;
+    }
+    /* magic formula for alternating */
+    .chessboard div:nth-child(odd) {
+      background: white;
+    }
+    .chessboard div:nth-child(even) {
+      background: black;
+    }
+    /* fix zebra by flipping every even row */
+    .chessboard div:nth-child(16n+1),
+    .chessboard div:nth-child(16n+3),
+    .chessboard div:nth-child(16n+5),
+    .chessboard div:nth-child(16n+7) {
+      background: black;
+    }
+    .chessboard div:nth-child(16n+2),
+    .chessboard div:nth-child(16n+4),
+    .chessboard div:nth-child(16n+6),
+    .chessboard div:nth-child(16n+8) {
+      background: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="chessboard">
+    <!-- 64 squares -->
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+  </div>
+</body>
+</html>
