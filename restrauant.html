@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      padding-left: 20px;
+      margin: 15px;
+    }
+
+    header{
+      background-color:rgb(17, 32, 76);
+      color: white;
+      padding: 50px ;
+      text-align: center;
+      border-radius: 20px;
+    }
+    .sidebar{
+      width: 150px;
+      height: 100vh;
+      background-color: black;
+      padding: 15px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      color: white;
+    }
+    .sidebar a{
+      display: block;
+      color: white;
+      padding: 10px;
+      text-decoration: none;
+    }
+    .sidebar a:hover{
+      background-color: lightslategray;
+    }
+    .content{
+      margin-left: 150px;
+      padding: 20px;
+    }
+
+    /* Specials styling */
+    .special-box {
+      width: 484px;
+      margin-bottom: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      min-height: 220px;
+      background:rgb(74, 91, 140);
+    }
+    .special-img {
+      width: 220px;
+      height: 220px;
+      vertical-align: top;
+      border-radius: 15px 0 0 15px;
+    }
+    .special-content {
+      display: inline-block;
+      vertical-align: top;
+      width: 260px;
+      height: 220px;
+      padding: 30px 20px 20px 25px;
+      box-sizing: border-box;
+      text-align: left;
+      background: rgba(0,0,0,0.18);
+      color: white;
+      position: relative;
+      left: -5px;
+      border-radius: 0 15px 15px 0;
+    }
+    .special-content h2 {
+      margin: 0 0 10px 0;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      color: #fff;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+    .special-content p {
+      font-size: 1.1em;
+      color: #f0f0f0;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gracy's Dhaba</h1>
+  </header>
+
+<div class="sidebar">
+  <h2><b>Menu</b></h2>
+  <a href="home">Home</a>
+  <a href="starters">Starters</a>
+  <a href="main_course">Main Course</a>
+  <a href="desserts">Desserts</a>
+  <a href="contact">Contact Us</a>
+</div>
+
+<div class="content">
+  <h1>Our Special's</h1>
+
+  <div class="special-box">
+    <img src="pizza.jpg" alt="Margherita Pizza" class="special-img">
+    <div class="special-content">
+      <h2>Margherita Pizza</h2>
+      <p>Classic pizza with fresh tomatoes, mozzarella cheese, and basil.</p>
+    </div>
+  </div>
+
+  <div class="special-box">
+    <img src="butter.jpg" alt="Paneer Butter Masala" class="special-img">
+    <div class="special-content">
+      <h2>Paneer Butter Masala</h2>
+      <p>Rich and creamy paneer butter masala with a blend of spices.</p>
+    </div>
+  </div>
+
+  <div class="special-box">
+    <img src="brownie.jpg" alt="Chocolate Brownie" class="special-img">
+    <div class="special-content">
+      <h2>Chocolate Brownie</h2>
+      <p>Delicious chocolate brownie served with vanilla ice cream.</p>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
