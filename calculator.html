@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator Layout</title>
+  <style>
+    body{
+      background-color: black;
+    }
+    .calc-container {
+      display: grid;
+      grid-template-columns: repeat(4, 50px);
+      grid-gap: 2px;
+      width: max-content;
+      margin: 200px;
+    }
+    .zero, .ac, .operators , .equal{
+      width: 50px;
+      height: 50px;
+      border-radius: 200px;
+      color: white;
+      text-align: center;
+      line-height: 50px;
+      font-size: 24px;
+      user-select: none;
+    }
+    .zero {
+      background-color: grey;
+    }
+    .ac {
+      background-color: maroon;
+    }
+    .operators {
+      background-color: lightslategrey;
+    }
+    .equal{
+      background-color: lightyellow;
+      color: black;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="calc-container">
+    
+    <div class="ac">AC</div>
+    <div class="operators">()</div>
+    <div class="operators">%</div>
+    <div class="operators">/</div>
+    
+    <div class="zero">7</div>
+    <div class="zero">8</div>
+    <div class="zero">9</div>
+    <div class="operators">*</div>
+
+
+    <div class="zero">4</div>
+    <div class="zero">5</div>
+    <div class="zero">6</div>
+    <div class="operators">-</div>
+
+
+    <div class="zero">1</div>
+    <div class="zero">2</div>
+    <div class="zero">3</div>
+    <div class="operators">+</div>
+
+    <div class="zero">0</div>
+    <div class="zero">.</div>
+    <div class="zero">$</div>
+    <div class="equal">=</div>
+
+  </div>
+</body>
+</html>
